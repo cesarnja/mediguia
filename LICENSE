@@ -9,3 +9,6 @@ escrito del titular.
 
 Los mapas base incluidos en img/ son © colaboradores de OpenStreetMap, disponibles bajo la
 licencia Open Database License (ODbL), y conservan su propia licencia.
+
+Las librerías de terceros incluidas (Leaflet y QRCode.js) conservan sus propias licencias,
+copiadas en vendor/LICENSES.md.
