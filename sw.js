@@ -1,4 +1,4 @@
-/* Service worker de las dos apps (MediGuía y, con «?app=entregas», MediGuía Entregas): guarda la
+/* Service worker de las dos apps (MediGuía+ y, con «?app=entregas», MediGuía+ Entregas): guarda la
    app en el teléfono para que abra sin internet (apagones, sin datos). No guarda datos de las
    personas: esos están cifrados en el navegador.
    Estrategia: primero la red (para recibir la versión nueva); si tarda más de 4 segundos o no hay
@@ -20,6 +20,18 @@ self.addEventListener('activate', (e) => {
       .keys()
       .then((keys) => Promise.all(keys.filter((k) => k.startsWith(`${APP}-app-`) && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
+  );
+});
+
+// Tocar un aviso (recordatorio de medicina) abre la app en la pantalla del aviso.
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  const url = SCOPE + ((e.notification.data && e.notification.data.url) || '');
+  e.waitUntil(
+    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+      const win = list.find((w) => w.url.startsWith(SCOPE));
+      return win ? win.focus().then((w) => (w && w.navigate ? w.navigate(url) : w)) : self.clients.openWindow(url);
+    })
   );
 });
 

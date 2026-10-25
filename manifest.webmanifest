@@ -1,7 +1,7 @@
 {
-  "name": "MediGuía",
-  "short_name": "MediGuía",
-  "description": "Especialistas, citas, historial médico y farmacias en Venezuela.",
+  "name": "MediGuía+",
+  "short_name": "MediGuía+",
+  "description": "Especialistas, exámenes, citas, historial médico y farmacias en Venezuela.",
   "lang": "es-VE",
   "dir": "ltr",
   "start_url": "./#/buscar",

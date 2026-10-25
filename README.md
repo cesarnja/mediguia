@@ -1,4 +1,4 @@
-# MediGuía
+# MediGuía+
 
 Demostración privada. El contenido de este sitio está **cifrado** y solo se abre con una clave de acceso.
 

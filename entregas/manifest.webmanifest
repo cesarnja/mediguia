@@ -1,7 +1,7 @@
 {
-  "name": "MediGuía Entregas",
+  "name": "MediGuía+ Entregas",
   "short_name": "Entregas",
-  "description": "Entregas a domicilio de MediGuía: repartidores, pacientes y farmacias, con QR y en la mano.",
+  "description": "Entregas a domicilio de MediGuía+: repartidores, pacientes y farmacias, con QR y en la mano.",
   "lang": "es-VE",
   "dir": "ltr",
   "start_url": "./#/inicio",
