@@ -1,0 +1,20 @@
+{
+  "name": "MediGuía",
+  "short_name": "MediGuía",
+  "description": "Especialistas, citas, historial médico y farmacias en Venezuela.",
+  "lang": "es-VE",
+  "dir": "ltr",
+  "start_url": "./#/buscar",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f6f8",
+  "theme_color": "#0f766e",
+  "categories": ["medical", "health"],
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
